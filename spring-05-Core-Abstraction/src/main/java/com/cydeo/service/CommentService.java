@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CommentService {
 
-    private final CommentRepository commentRepository; //Final is good practice to put, because if we forget to put constructor, final keyword remind us.
+    private final CommentRepository commentRepository; //Final is good practice to put, because if we forget to put constructor, final keyword reminds us.
     private final CommentNotificationProxy commentNotificationProxy;
 
     public CommentService(CommentRepository commentRepository,@Qualifier ("Email") CommentNotificationProxy commentNotificationProxy) {
