@@ -18,12 +18,13 @@ public class PcConfig {
         return new Dimensions(50,10,10);
     }
 
-
     @Bean
     public Case caseDell(Dimensions dimensions){ //There are 2 ways to pass the object to another object. 1. pass a method parameter, 2. set the object inside the method;
 
         return new DellCase("220B","Dell","240",dimensions);
+        //If we provide dimension as a new object,that will be tightly coupled, and we don't want that.
     }
+
 
     @Bean
   public Monitor SonyMonitor (){
