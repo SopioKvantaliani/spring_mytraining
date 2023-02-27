@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class RegularHours implements HoursRepositoryInterface{
     @Override
     public int getHours() {
-        return 40;
+        return 15;
     }
 }
