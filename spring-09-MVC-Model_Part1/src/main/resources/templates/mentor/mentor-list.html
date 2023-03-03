@@ -17,7 +17,8 @@
     </thead>
     <tbody>
     <tr>
-        <td th:text="${mentors.get(0).firstName}"></td>
+        <td th:text="${mentors.get(0).getFirstName()}"></td>
+        <!--access index 0 and then take firstname-->
         <td th:text="${mentors.get(0).lastName}"></td>
         <td th:text="${mentors.get(0).age}"></td>
         <td th:text="${mentors.get(0).getGender()}"></td>

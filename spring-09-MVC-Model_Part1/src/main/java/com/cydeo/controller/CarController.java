@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CarController {
 
     //localhost:8080/info?make=Honda
-    @RequestMapping("/info")
+    @RequestMapping("/info") //end point
     public String carInfo(@RequestParam String make, Model model){
 
-        model.addAttribute("make",make);
+        model.addAttribute("make",make); //in reality this attributeName comes from UI / Make should match query parameter.
 
         return "car/car-info";
     }
@@ -24,7 +24,7 @@ public class CarController {
 
         model.addAttribute("make",make);
 
-        return "car/car-info";
+        return "car/car-info"; //this is called view
     }
 
 

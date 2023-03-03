@@ -13,7 +13,7 @@ import java.util.List;
 public class MentorController {
 
     @RequestMapping("/list")
-    public String showTable(Model model){
+    public String showTable(Model model){ //Model model is interface;
 
         List<Mentor> mentorList = new ArrayList<>();
         mentorList.add(new Mentor("Mike","Smith",45, Gender.MALE));
