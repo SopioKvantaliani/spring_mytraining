@@ -14,9 +14,66 @@
 <!--its flexible, we can concatenate different data-->
 
 <h2 th:text="${ 'Hello'+students.get(0).firstName}"></h2>
-<h2 th:text="${ 'Hello'+students.get(0).firstName +''+students.get(0).lastName}"></h2>
+<h2 th:text="${students.get(0).firstName +''+students.get(0).lastName}"></h2>
+
+<!--Link-->
+<h2>
+<a th:href="@{https://www.cydeo.com}">Cydeo Page</a>
+</h2>
+
+<!--pass one of the view, when you click you'll go to that view-->
+<h2>
+<a th:href="@{/student/welcome}">Welcome</a>
+</h2>
+
+<!--When you click on Link, which browser end-point you want to navigate-->
+<h2>
+    <a th:href="@{/student/welcome(id=3)}">Link</a>
+</h2>
+
+<!--get student name and show on UI-->
+
+<h2>
+    <a th:href="@{/student/welcome(name=${students.get(0).firstName})}">Link2</a>
+</h2>
+
+<!--Iteration -->
+<!--students represents student list, name imply to get one name-->
+
+<h2>Printing Student's First Name</h2>
+<ul>
+    <li th:each=" student : ${students} " th:text="${student.firstName}"></li>
+</ul>
+
+<h2>Printing Student's Last Name</h2>
 
 
+<ul>
+    <li th:each=" student : ${students} " th:text="${student.lastName}"></li>
+
+</ul>
+
+<h2>Printing Student's in table</h2>
+
+<table>
+    <thead>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>State</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students} ">
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+        <td th:text="${student.age}"></td>
+        <td th:text="${student.state}"></td>
+    </tr>
+
+    </tbody>
+</table>
 
 </body>
 </html>
