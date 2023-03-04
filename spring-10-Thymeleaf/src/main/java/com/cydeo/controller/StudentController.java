@@ -14,7 +14,7 @@ public class StudentController {
     public String register (Model model) {
     model.addAttribute("students", DataGenerator.createStudent());
 
-        return "student/register"; //view
+        return "student/register"; //view endpoint
     }
 
     @RequestMapping("/drop") //localhost:8080/student/drop
@@ -24,9 +24,7 @@ public class StudentController {
     }
 
     @RequestMapping("/welcome") //localhost:8080/student/welcome?id=3
-    public String welcome (@RequestParam String name) {
-
-        System.out.println(name);
+    public String welcome () {
 
         return "student/welcome"; //view
     }
