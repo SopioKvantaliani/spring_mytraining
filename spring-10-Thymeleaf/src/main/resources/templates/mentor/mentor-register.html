@@ -8,7 +8,8 @@
 
 <div align="center">
 <!--When we create form, we need to introduce Object, which object will be linked to that form-->
-<form th:object="${mentor}">
+<!--When we click 'Register' happens whatever we describe in 'action'. After execution, we see different endpoint "mentor/confirm"-->
+<form th:action="@{/mentor/confirm}" method="post" th:object="${mentor}">
 
 <!--We need to link field to that object-->
 
