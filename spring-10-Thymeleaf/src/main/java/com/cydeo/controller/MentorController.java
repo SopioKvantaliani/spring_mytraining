@@ -26,11 +26,12 @@ public class MentorController {
     }
 
     @PostMapping("/confirm") //localhost:8080/mentor/register/confirm
-    public String submitForm (@ModelAttribute("mentor") Mentor mentor) { //new syntax
-
-
+    //we redirect this method to above method after registering to come back to mentor/register endpoint;
+    public String submitForm (@ModelAttribute("mentor") Mentor mentor, Model model) { //new syntax, we are looking new model after registering one object
+//        model.addAttribute("mentor", new Mentor());
         //how can I access to "mentor" attribute in this method
-        return "mentor/mentor-confirmation";
+   //     return "mentor/mentor-confirmation";
+        return "redirect:/mentor/register"; //redirect means don't show view, execute that method.
     }
 
     //it is possible to have Post and GetMapping at the same time with the same endpoint
