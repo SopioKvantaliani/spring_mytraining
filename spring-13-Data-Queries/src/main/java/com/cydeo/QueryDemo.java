@@ -41,7 +41,11 @@ public class QueryDemo implements CommandLineRunner {
 
         System.out.println("Find All Employees " + " " + employeeRepository.findByEmail("btrow5@technorati.com") );
         System.out.println("Find All Employees " + " " + employeeRepository.findByFirstNameAndLastNameOrEmail("Aeriell", "McNee", "btrow5@technorati.com") );
+        System.out.println("Find All Employees " + " " + employeeRepository.findAllByEmailIsNull());
 
+        System.out.println("--------------Employees  JPQL------------------");
+
+        System.out.println(employeeRepository.retrieveEmployeeDetail());
 
 
     }
