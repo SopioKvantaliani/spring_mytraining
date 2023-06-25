@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@ExtendWith(MockitoExtension.class)
+@ExtendWith(MockitoExtension.class) //since we are going to use Mocks we need to extendWith Mockito
 class ProjectServiceImplTest {
 
     @Mock
